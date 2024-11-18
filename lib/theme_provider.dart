@@ -25,6 +25,7 @@ class ThemeProvider with ChangeNotifier {
   int _currentThemeIndex = 0;
 
   ThemeData get currentTheme => themes[_currentThemeIndex];
+  int get currentFontIndex => _currentFontIndex;
 
   void updateTheme(int index) {
     _currentThemeIndex = index;
@@ -33,13 +34,13 @@ class ThemeProvider with ChangeNotifier {
 
   // List of font styles
   List<TextStyle> fonts = [
-    GoogleFonts.roboto(),
-    GoogleFonts.lobster(),
-    GoogleFonts.montserrat(),
+    GoogleFonts.notoSansJavanese(),
+    GoogleFonts.dotGothic16(),
+    GoogleFonts.oswald(),
   ];
 
   // List of font names for display purposes
-  List<String> fontNames = ['Roboto', 'Lobster', 'Montserrat'];
+  List<String> fontNames = ['Noto Sans Jacanese', 'Doto', 'Oswald'];
 
   // Current font index
   int _currentFontIndex = 0;

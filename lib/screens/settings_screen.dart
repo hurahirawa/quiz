@@ -43,6 +43,12 @@ class SettingsScreen extends StatelessWidget {
                     );
                   }),
                 ),
+                const SizedBox(height: 20),
+                // Teks untuk memastikan perubahan font
+                Text(
+                  'Current Font: ${themeProvider.fontNames[themeProvider.currentFontIndex]}',
+                  style: themeProvider.currentFont.copyWith(fontSize: 18),
+                ),
               ],
             ),
           );
